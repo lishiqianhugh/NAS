@@ -1,5 +1,5 @@
 # Learning Transferable Architectures for Scalable Image Recognition(NASnet)
-file:///D:/Mine/科研/NAS/01_NAS/NASNet.pdf
+[论文](file:///D:/Mine/科研/NAS/01_NAS/NASNet.pdf)
 ## 方法
 强化学习
 ## 所做工作
