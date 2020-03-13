@@ -37,4 +37,5 @@
 ## 核心工作
 * 运用CNN和RNN都适用的搜索空间（与NASnet和ENAS相同）
 * 发明可微的搜索空间，利用混合操作训练架构（所有可选操作用softmax赋权得到混合操作）
+![混合操作公式]（https://github.com/lishiqianhugh/NAS/blob/master/NAS截图/DARTS混合操作公式.png）
 * 用梯度发更新架构参数α和各个操作内部的参数w
