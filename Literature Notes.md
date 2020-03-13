@@ -1,6 +1,7 @@
 # Learning Transferable Architectures for Scalable Image Recognition(NASnet)
 ## 方法
-强化学习 Policy Gradient
+* 强化学习Policy Gradient--更新控制器
+* `梯度下降--更新子网络的参数`
 ## 所用数据集
 * cifar-10
 * ImageNet
@@ -11,7 +12,8 @@
 * 将从ImageNet上学习到的特征和Faster-RCNN结合可以用在COCO上做目标检测
 # ENAS
 ## 方法
-随机梯度下降（SGD）
+* 随机梯度下降（SGD）--更新w
+* 强化学习--更新控制器
 ## 所用数据集
 * Penn Treebank
 * cifar-10
@@ -26,7 +28,7 @@
 ## 所用数据集
 * cifar-10
 * ImageNet
-* ·PTB·
+* PTB
 * WikiText-2
 ## 核心工作
 * 运用CNN和RNN都适用的搜索空间（与NASnet和ENAS相同）
