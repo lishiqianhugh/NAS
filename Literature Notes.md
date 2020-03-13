@@ -15,7 +15,6 @@
 
 ## 方法
 
-* 随机采样
 * 梯度下降
 
 ## 所用数据集
@@ -28,11 +27,17 @@
 
 ## 核心工作
 
-* 设计HyperNet生成W
-* 一次训练，训练所有参数
+* 设计HyperNet用来生成W
+* 一次训练，训练所有参数；每一个minibatch训练一个采样的子网络
 * 结束训练后对所有随机产生的子网络评估测试集上的误差，选出最好的重新训练
 
-![SMASH_Algorithm]()ENAS
+![SMASH_Algorithm](https://github.com/lishiqianhugh/NAS/blob/master/Screenshots/NASP_Algorithm.png)
+
+## 合理性解释
+
+one-shot模型可以自动学习到网络中哪些操作最有用，并会逐渐依赖这些操作。去掉不重要的操作对模型的预测准确率有很小的影响；但去掉最重要的操作会对模型的预测产生非常大的影响。
+
+# ENAS
 
 ## 方法
 * 随机梯度下降（SGD）--更新w
