@@ -22,6 +22,10 @@
 * 设计RNN cell
 * 设计CNN 网络架构
 * 设计CNN cell
+## 采样子网络的方法
+* 控制器采样一系列的自网络
+* 每个子网络用一个minibatch的validation datase测试
+* 选出最好的子网络，从头开始训练
 # DARTS
 ## 方法
 梯度下降
