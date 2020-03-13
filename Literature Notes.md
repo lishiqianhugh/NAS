@@ -1,4 +1,4 @@
-# Learning Transferable Architectures for Scalable Image Recognition(NASnet)
+# Learning Transferable Architectures for Scalable Image Recognition(NASnet)(2018)
 ## 方法
 * 强化学习Policy Gradient--更新控制器
 * `梯度下降--更新子网络的参数`
@@ -10,7 +10,30 @@
 * 用RNN控制器（Proximal Policy Optimization方法更新）采样子网络，搜索卷积神经网络的cell(Normal, Reduction)，一个cell有B（论文中为5）个blocks
 * 先在cifar-10上搜索架构，再迁移到ImageNet上训练
 * 将从ImageNet上学习到的特征和Faster-RCNN结合可以用在COCO上做目标检测
-# ENAS
+
+# SMASH One-shot(HyperNetworks)(2017)
+
+## 方法
+
+* 随机采样
+* 梯度下降
+
+## 所用数据集
+
+* cifar-10
+* cifar-100
+* STL-10
+* ModelNet10
+* ImageNet32×32
+
+## 核心工作
+
+* 设计HyperNet生成W
+* 一次训练，训练所有参数
+* 结束训练后对所有随机产生的子网络评估测试集上的误差，选出最好的重新训练
+
+![SMASH_Algorithm]()ENAS
+
 ## 方法
 * 随机梯度下降（SGD）--更新w
 * 强化学习--更新控制器
