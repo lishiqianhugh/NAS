@@ -59,7 +59,7 @@
 ## 核心工作
 
 * 对比DARTS和NASP
+* 在DARTS连续训练架构的基础上，利用近端的方法，离散出每对结点当前最好的一个操作单独更新w。从而减少了训练复杂度
+* 先在cifar-10和PTB上搜索架构并训练，并分别迁移到ImageNet和WikiText-2上
 
-* 在DARTS连续训练架构的基础上，利用近端的方法，离散出当前最好的架构单独更新w
-
-  
+![NASP_Algorithm](https://github.com/lishiqianhugh/NAS/blob/master/Screenshots/NASP_Algorithm.png)
