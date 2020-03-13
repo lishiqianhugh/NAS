@@ -6,9 +6,20 @@
 * ImageNet
 * COCO
 ## 核心工作
-* 用RNN控制器采样子网络，搜索卷积神经网络的cell(Normal, Reduction)，一个cell有B（论文中为5）个blocks
+* 用RNN控制器（Proximal Policy Optimization方法更新）采样子网络，搜索卷积神经网络的cell(Normal, Reduction)，一个cell有B（论文中为5）个blocks
 * 先在cifar-10上搜索架构，再迁移到ImageNet上训练
 * 将从ImageNet上学习到的特征和Faster-RCNN结合可以用在COCO上做目标检测
+# ENAS
+## 方法
+随机梯度下降（SGD）
+## 所用数据集
+* Penn Treebank
+* cifar-10
+## 核心工作
+* 保留已训练的参数，实现权重共享
+* 设计RNN cell
+* 设计CNN 网络架构
+* 设计CNN cell
 # DARTS
 ## 方法
 梯度下降
@@ -16,6 +27,7 @@
 * cifar-10
 * ImageNet
 * ·PTB·
+* WikiText-2
 ## 核心工作
 * 运用CNN和RNN都适用的搜索空间（与NASnet和ENAS相同）
 * 发明可微的搜索空间，利用混合操作训练架构（所有可选操作用softmax赋权得到混合操作）
