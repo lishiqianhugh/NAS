@@ -1,4 +1,4 @@
-# Learning Transferable Architectures for Scalable Image Recognition(NASnet)(2018)
+#  *Learning Transferable Architectures for Scalable Image Recognition(NASnet)(2018)*
 ## 方法
 * 强化学习Policy Gradient--更新控制器
 * `梯度下降--更新子网络的参数`
@@ -11,7 +11,7 @@
 * 先在cifar-10上搜索架构，再迁移到ImageNet上训练
 * 将从ImageNet上学习到的特征和Faster-RCNN结合可以用在COCO上做目标检测
 
-# SMASH One-shot(HyperNetworks)(2017)
+# *SMASH One-shot(HyperNetworks)(2017)*
 
 ## 方法
 
@@ -35,9 +35,9 @@
 
 ## 合理性解释
 
-one-shot模型可以自动学习到网络中哪些操作最有用，并会逐渐依赖这些操作。去掉不重要的操作对模型的预测准确率有很小的影响；但去掉最重要的操作会对模型的预测产生非常大的影响。
+ one-shot模型可以自动学习到网络中哪些操作最有用，并会逐渐依赖这些操作。去掉不重要的操作对模型的预测准确率有很小的影响；但去掉最重要的操作会对模型的预测产生非常大的影响。
 
-# ENAS
+# *ENAS*
 
 ## 方法
 * 随机梯度下降（SGD）--更新w
@@ -54,7 +54,7 @@ one-shot模型可以自动学习到网络中哪些操作最有用，并会逐渐
 * 控制器采样一系列的自网络
 * 每个子网络用一个minibatch的validation datase测试
 * 选出最好的子网络，从头开始训练
-# DARTS
+# *DARTS*
 ## 方法
 梯度下降
 ## 所用数据集
@@ -71,7 +71,7 @@ one-shot模型可以自动学习到网络中哪些操作最有用，并会逐渐
 
 * 用梯度发更新架构参数α和各个操作内部的参数w
 
-# NASP
+# *NASP*
 
 ## 方法
 
