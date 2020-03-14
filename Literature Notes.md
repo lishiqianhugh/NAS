@@ -30,6 +30,7 @@
 * 设计HyperNet用来生成W
 * 一次训练，训练所有参数；每一个minibatch训练一个采样的子网络
 * 结束训练后对所有随机产生的子网络评估测试集上的误差，选出最好的重新训练
+* 在训练过程中使用Dropout来使得模型去掉大量分支后（评估时）仍具有鲁棒性
 
 ![SMASH_Algorithm](https://github.com/lishiqianhugh/NAS/blob/master/Screenshots/NASP_Algorithm.png)
 
@@ -91,3 +92,26 @@
 * 先在cifar-10和PTB上搜索架构并训练，并分别迁移到ImageNet和WikiText-2上
 
 ![NASP_Algorithm](https://github.com/lishiqianhugh/NAS/blob/master/Screenshots/NASP_Algorithm.png)
+
+# HM-NAS
+
+## 方法
+
+与DARTS类似，只不过多加了一级架构可训练的参数，并加入了mask操作
+
+## 所用数据集
+
+* cifar-10
+* ImageNet
+
+## 核心工作
+
+* 在DARTS的基础上发明了多级架构编码机制，即在cell中除了每条边上的各个操作有权重参数，一个cell里的每条边也有权重参数，同样用softmax表示。这样使得搜索空间更加灵活，更有可能找到最优的子架构
+* 发明了分级mask机制，对{α，β，w}分别设计mask，`然后训练mask`，从而在已训练好的supernet上通过剪枝找到最好的子网络
+* 不用重新从头训练（retrain from scratch），而是进行fine-tuning
+
+![HM-NAS_Algorithm]()
+
+## 思考
+
+将搜索本身看作一个深度神经网络进行训练，得到架构最优参数
