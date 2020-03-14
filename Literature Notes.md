@@ -110,7 +110,7 @@
 * 发明了分级mask机制，对{α，β，w}分别设计mask，`然后训练mask`，从而在已训练好的supernet上通过剪枝找到最好的子网络
 * 不用重新从头训练（retrain from scratch），而是进行fine-tuning
 
-![HM-NAS_Algorithm]()
+![HM-NAS_Algorithm](https://github.com/lishiqianhugh/NAS/blob/master/Screenshots/HM-NAS_Algorithm.png)
 
 ## 思考
 
