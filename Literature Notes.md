@@ -93,7 +93,7 @@
 
 ![NASP_Algorithm](https://github.com/lishiqianhugh/NAS/blob/master/Screenshots/NASP_Algorithm.png)
 
-# HM-NAS
+# *HM-NAS*
 
 ## 方法
 
@@ -115,3 +115,17 @@
 ## 思考
 
 将搜索本身看作一个深度神经网络进行训练，得到架构最优参数
+
+# *Auto-FPN*
+
+## 所用数据集
+
+* Pascal VOC
+* COCO
+* BDD
+* VisualGenome
+* ADE
+
+## 核心工作
+
+目前主要的NAS目标检测架构是将图像分类的架构迁移得来的，该文提出了一种直接搜索目标检测架构的方法
